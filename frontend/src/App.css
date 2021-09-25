@@ -1,0 +1,33 @@
+.App-header {
+  background-color: #feea59;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+}
+.App-header_form {
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
+.App-header_container {
+  display: flex;
+}
+.App-header-input {
+  width: 65vw;
+  border: white;
+}
+button img {
+  width: 10px;
+  height: 10px;
+}
+button {
+  border: none;
+}
+img {
+  with: 20px;
+  height: 20px;
+}
