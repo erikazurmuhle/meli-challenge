@@ -9,25 +9,48 @@
   color: white;
 }
 .App-header_form {
+  display: flex;
   height: 80%;
-  margin: 0;
+  margin: 0 10px;
   padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 .App-header_container {
   display: flex;
+  height: 40px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding-right: 4px;
 }
 .App-header-input {
   width: 65vw;
+  height: 33px;
   border: white;
+  border-radius: 4px 0px 0px 4px;
+  padding-left: 22px;
+  outline: rgba(170, 191, 211, 0.158);
+  font-size: 1.5em;
+  color: ;
 }
 button img {
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
 }
 button {
   border: none;
+  width: 40px;
+  height: 33px;
+  padding: 0;
+  border-radius: 0px 4px 4px 0px;
 }
 img {
   with: 20px;
-  height: 20px;
+  height: 35px;
+}
+.App-hearder_container-logo {
+  margin: 5px;
 }

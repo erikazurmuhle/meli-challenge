@@ -4,7 +4,11 @@ export default function searcher() {
   return (
     <header className="App-header">
       <div className="App-header_container">
-        <img src="Logo_ML@2x.png.png.png" alt="logo"></img>
+        <img
+          className="App-hearder_container-logo"
+          src="Logo_ML@2x.png.png.png"
+          alt="logo"
+        ></img>
         <form className="App-header_form">
           <input
             className="App-header-input"
