@@ -1,5 +1,13 @@
+.App {
+  background-color: #eeeeee;
+  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif;
+}
+
+/* Searcher */
+
 .App-header {
-  background-color: #feea59;
+  background-color: #ffe600;
   min-height: 5vh;
   display: flex;
   flex-direction: row;
@@ -29,9 +37,9 @@
   border: white;
   border-radius: 4px 0px 0px 4px;
   padding-left: 22px;
-  outline: rgba(170, 191, 211, 0.158);
+  outline: #999999;
   font-size: 1.5em;
-  color: ;
+  color: #333333;
 }
 button img {
   width: 17px;
@@ -46,15 +54,11 @@ button {
   padding: 0;
   border-radius: 0px 4px 4px 0px;
 }
-img {
-  with: 20px;
-  height: 35px;
-}
+
 .App-hearder_container-logo {
   margin: 5px;
-}
-.App {
-  background-color: rgba(220, 223, 228, 0.6);
+  with: 20px;
+  height: 35px;
 }
 
 h4 {
@@ -65,16 +69,65 @@ h4 {
   font-weight: 400;
 }
 .topProducts {
-  background-color: whitesmoke;
+  background-color: white;
   height: 90vh;
   width: 75vw;
 }
+
+/* BreadCrum */
+
+.breadcrum {
+  width: 75vw;
+  color: #333333;
+
+  font-size: 1em;
+  margin: 16px 0;
+}
+
+/* Div Render */
+
 .App_render {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.breadcrum {
-  width: 75vw;
-  margin-left: 10px;
+
+/* TOP PRODUCT */
+
+.topProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.topProducts_img {
+}
+.topProducts_img img {
+  object-fit: cover;
+  width: 680px;
+}
+.topProducts_info h2 {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 24px;
+}
+.topProducts_info h1 {
+  font-size: 46px;
+}
+.topProducts_info p {
+  font-size: 14px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.topProducts_info button {
+  width: 100%;
+  border-radius: 3px;
+  color: white;
+  background-color: blue;
+}
+.topProducts_description {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.topProducts_description p {
+  font-size: 16px;
 }
