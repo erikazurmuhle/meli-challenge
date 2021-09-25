@@ -2,7 +2,7 @@ import React from "react";
 
 export default function searcher() {
   return (
-    <header className="App-header">
+    <header role="banner" className="App-header">
       <div className="App-header_container">
         <img
           className="App-hearder_container-logo"

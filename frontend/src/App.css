@@ -1,5 +1,12 @@
+.App {
+  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif;
+}
+
+/* Searcher */
+
 .App-header {
-  background-color: #feea59;
+  background-color: #ffe600;
   min-height: 5vh;
   display: flex;
   flex-direction: row;
@@ -22,16 +29,17 @@
   display: flex;
   height: 50px;
   align-items: center;
+  justify-content: center;
 }
 .App-header-input {
-  width: 65vw;
+  width: 54vw;
   height: 33px;
   border: white;
   border-radius: 4px 0px 0px 4px;
   padding-left: 22px;
-  outline: rgba(170, 191, 211, 0.158);
+  outline: #999999;
   font-size: 1.5em;
-  color: ;
+  color: #333333;
 }
 button img {
   width: 17px;
@@ -46,15 +54,11 @@ button {
   padding: 0;
   border-radius: 0px 4px 4px 0px;
 }
-img {
-  with: 20px;
-  height: 35px;
-}
+
 .App-hearder_container-logo {
   margin: 5px;
-}
-.App {
-  background-color: rgba(220, 223, 228, 0.6);
+  with: 20px;
+  height: 35px;
 }
 
 h4 {
@@ -64,17 +68,82 @@ h4 {
   font-size: 0.8em;
   font-weight: 400;
 }
-.topProducts {
-  background-color: whitesmoke;
-  height: 90vh;
-  width: 75vw;
+
+/* BreadCrum */
+
+.breadcrum {
+  width: 60vw;
+  margin: 16px 0;
 }
+.breadcrum a {
+  text-decoration: transparent;
+  color: #999999;
+  font-size: 14px;
+}
+
+/* Div Render */
+
 .App_render {
   display: flex;
   flex-direction: column;
+  background-color: #eeeeee;
+  height: 94vh;
   align-items: center;
 }
-.breadcrum {
-  width: 75vw;
-  margin-left: 10px;
+
+/* TOP PRODUCT */
+
+.topProducts {
+  background-color: white;
+  width: 60vw;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0px 50px 30px 50px;
+  justify-content: space-between;
+}
+.topProducts_img {
+  width: 680px;
+}
+.topProducts_img img,
+.topProducts_description {
+  object-fit: cover;
+  max-width: 680px;
+  width: 100%;
+  height: auto;
+}
+.topProducts_info {
+  width: 300px;
+}
+.topProducts_info h2 {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 24px;
+}
+.topProducts_info h1 {
+  font-size: 46px;
+  font-weight: 300;
+}
+.topProducts_info p {
+  font-size: 14px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.topProducts_info button {
+  width: 100%;
+  border-radius: 3px;
+  color: white;
+  background-color: #3483fa;
+}
+.topProducts_description {
+  margin-bottom: 10px;
+  width: 680px;
+}
+.topProducts_description h2 {
+  font-weight: 300;
+}
+.topProducts_description p {
+  font-size: 16px;
 }
