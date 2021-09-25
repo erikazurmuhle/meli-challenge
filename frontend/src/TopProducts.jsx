@@ -12,8 +12,8 @@ export default function TopProducts() {
       </div>
       <div className="topProducts_info">
         <p>Nuevo-215 vendidos</p>
-        <h2>Cabina de fotos</h2>
-        <h1>$1500</h1>
+        <h2>Cabina de fotos para productos de comercio</h2>
+        <h1>$1.500</h1>
         <button>Comprar</button>
       </div>
       <div className="topProducts_description">
