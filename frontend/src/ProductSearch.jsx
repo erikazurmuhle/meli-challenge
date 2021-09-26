@@ -1,9 +1,15 @@
 import React from "react";
+import CardItem from "./CardItem";
 
-export default function ProductSearch() {
+export default function ProductSearch(products) {
+  console.log("PRODUCTARD", products);
   return (
     <div>
-      <h1>PRODUCTOSSSSSSSS</h1>
+      {products.length
+        ? products.map((producto, item) => (
+            <CardItem key={item} producto={producto} />
+          ))
+        : null}
     </div>
   );
 }

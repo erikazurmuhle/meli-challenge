@@ -97,10 +97,8 @@ h4 {
   background-color: white;
   width: 60vw;
   height: auto;
-
   display: flex;
   flex-wrap: wrap;
-
   padding: 0px 50px 30px 50px;
   justify-content: space-between;
 }
@@ -146,4 +144,22 @@ h4 {
 }
 .topProducts_description p {
   font-size: 16px;
+}
+
+/* CARDSITEMS */
+.App_renderSearch {
+  background-color: white;
+  width: 60vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 50px 30px 50px;
+  justify-content: space-between;
+}
+.cardItem {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
