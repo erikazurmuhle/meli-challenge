@@ -1,18 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import Searcher from "./Searcher";
-import axios from "axios";
-
+import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { searchProd } from "../store/searchProducts";
 
-function SearcherContainer({ searchProd }) {
+function SearcherContainer() {
   const [productName, setProductName] = useState("");
 
   const history = useHistory();
-
-  // useEffect(() => {
-  //   console.log("NUEVA BUSQUEDA", products);
-  // }, [products]);
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setProductName(e.target.value);
@@ -21,8 +18,9 @@ function SearcherContainer({ searchProd }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    searchProd(productName);
+    dispatch(searchProd(productName));
     console.log("se mandoooooo", productName);
+    history.push("/items?search=");
   };
 
   return (

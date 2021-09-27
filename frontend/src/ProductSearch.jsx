@@ -1,7 +1,7 @@
 import React from "react";
 import CardItem from "./CardItem";
 
-export default function ProductSearch(products) {
+export default function ProductSearch({ products }) {
   console.log("PRODUCTARD", products);
   return (
     <div>
