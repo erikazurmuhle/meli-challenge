@@ -1,10 +1,12 @@
 import React from "react";
 import CardItem from "./CardItem";
+import { useSelector } from "react-redux";
 
-export default function ProductSearch(products) {
-  console.log("PRODUCTARD", products);
+export default function ProductSearch() {
+  const products = useSelector((state) => state.SearchProducts.items);
+
   return (
-    <div>
+    <div className="containerCards">
       {products.length
         ? products.map((producto, item) => (
             <CardItem key={item} producto={producto} />
