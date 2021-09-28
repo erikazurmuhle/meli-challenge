@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Searcher from "./Searcher";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { searchProd } from "../store/searchProducts";
 
@@ -13,14 +13,11 @@ function SearcherContainer() {
 
   const handleChange = (e) => {
     setProductName(e.target.value);
-    console.log("buscamos ", productName);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(searchProd(productName));
-    console.log("se mandoooooo", productName);
-    history.push("/items?search=");
+    dispatch(searchProd(productName)).then((res) => history.push("/items"));
   };
 
   return (

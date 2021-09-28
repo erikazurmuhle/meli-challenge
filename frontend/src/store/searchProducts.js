@@ -7,18 +7,10 @@ const initialState = {
 
 export const searchProd = createAsyncThunk("searchProd", (productName) => {
   console.log("PRODNAME CREATASYNC", productName);
-  return axios
-    .get(`http://localhost:3005/api/search/${productName}`)
-    .then((response) => {
-      console.log("PARASETEAR PROD", response.data);
-      return response;
-    });
+  return axios.get(`http://localhost:3005/api/search/${productName}`);
 });
 const searchProductsReducer = createReducer(initialState, {
-  [searchProd.fulfilled]: (state, action) => {
-    console.log("PAYLOAD", action.payload);
-    //state.productsSearch = payload.results;
-  },
+  [searchProd.fulfilled]: (state, action) => action.payload.data,
 });
 
 export default searchProductsReducer;

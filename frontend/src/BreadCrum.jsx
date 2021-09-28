@@ -4,7 +4,9 @@ import "./App.css";
 export default function BreadCrum() {
   return (
     <div className="breadcrum">
-      <Link>Electrónica, Audio y Video &gt; iPod &gt; Reproductores &gt; </Link>
+      <Link to="">
+        Electrónica, Audio y Video &gt; iPod &gt; Reproductores &gt;{" "}
+      </Link>
     </div>
   );
 }
