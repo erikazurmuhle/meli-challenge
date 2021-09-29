@@ -21,9 +21,9 @@ function SearcherContainer() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <Searcher handleChange={handleChange} handleSubmit={handleSubmit} />
-    </div>
+    </React.Fragment>
   );
 }
 

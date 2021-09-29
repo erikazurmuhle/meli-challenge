@@ -4,7 +4,7 @@ import "./App.css";
 import SearcherContainer from "./Seacher/SearcherContainer";
 import BreadCrum from "./BreadCrum";
 import ProductSearch from "./ProductSearch";
-import SingleProduct from "./SingleProduct";
+import SingleProductContainer from "./SingleProduct/SingleProductContainer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <BreadCrum />
         <div>
           <Switch>
-            <Route path="/item/:id" exact component={SingleProduct} />
+            <Route path="/item/:id" exact component={SingleProductContainer} />
             <Route path="/items" exact component={ProductSearch} />
           </Switch>
         </div>
