@@ -12,12 +12,12 @@ function App() {
       <SearcherContainer />
       <div className="App_render">
         <BreadCrum />
-        <div>
+        <React.Fragment>
           <Switch>
             <Route path="/item/:id" exact component={SingleProductContainer} />
             <Route path="/items" exact component={ProductSearch} />
           </Switch>
-        </div>
+        </React.Fragment>
       </div>
     </div>
   );
