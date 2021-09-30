@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import "./singleProduct.css";
 
 export default function SingleProduct() {
   const singleProduct = useSelector((state) => state.SingleProduct.item);

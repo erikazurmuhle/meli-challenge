@@ -1,0 +1,15 @@
+.containerCards {
+  background-color: white;
+  width: 95vw;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 700px) {
+  .containerCards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+    width: 60vw;
+  }
+}
