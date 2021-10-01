@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Searcher from "./Searcher";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { searchProd } from "../store/searchProducts";
 import { resetState } from "../store/singleProduct";
