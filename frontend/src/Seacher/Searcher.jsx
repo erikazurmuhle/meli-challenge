@@ -1,7 +1,7 @@
 import React from "react";
 import "./searcher.scss";
 
-export default function searcher({ handleChange, handleSubmit }) {
+export default function searcher({ handleChange, handleSubmit, productName }) {
   return (
     <header role="banner" className="App-header">
       <img
@@ -15,6 +15,8 @@ export default function searcher({ handleChange, handleSubmit }) {
           className="App-header-input"
           type="text"
           placeholder="Nunca dejes de buscar"
+          aria-label="Ingresá lo que que buscás"
+          value={productName}
         />
         <button onClick={handleSubmit}>
           <img src="ic_Search@2x.png.png.png" alt="buscar" />

@@ -9,11 +9,17 @@ const SearchProducts = async (req, res, next) => {
     console.log("PRODUCTOOOOOO", response.data.results[0]);
     const results = response.data.results.slice(0, 4);
     const filterItems = [];
+    const categories = [];
+
     results.map((x) => {
+      if (!categories.includes(x.category_id)) {
+        categories.push(x.category_id);
+        console.log("CATEGORIESSSS", categories);
+      }
       const price = {
         currency: x.prices.prices[0].currency_id,
         amount: x.prices.prices[0].amount,
-        decimals: "no se donde está decimals",
+        decimals: 00,
       };
       const prod = {
         id: x.id,
@@ -27,7 +33,7 @@ const SearchProducts = async (req, res, next) => {
     });
     const products = {
       author: { name: "Erika", lastname: "Zurmuhle" },
-      categories: ["donde están las categorías????"],
+      categories: categories,
       items: filterItems,
     };
 
