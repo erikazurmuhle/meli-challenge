@@ -1,44 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import "./singleProduct.scss";
 
 export default function SingleProduct() {
-  const singleProduct = useSelector((state) => state.SingleProduct.item);
-  console.log("PPPPPPPPPP", singleProduct);
+  const product = useSelector((state) => state.SingleProduct.item);
+
   return (
     <React.Fragment>
-      {singleProduct ? (
+      {product && (
         <div className="topProducts">
           <div className="topProducts_img">
             <img
-              src={singleProduct.picture}
+              src={product.picture}
               alt="cabina fotos"
               title="cabina fotos"
             />
           </div>
           <div className="topProducts_info">
             <p>
-              {singleProduct.condition === "new" ? (
+              {product.condition === "new" ? (
                 <span>Nuevo </span>
               ) : (
                 <span>Usado </span>
               )}
-              - {singleProduct.sold_quantity} vendidos
+              - {product.sold_quantity} vendidos
             </p>
-            <h2>{singleProduct.title}</h2>
-            <h1>${singleProduct.price.amount}</h1>
+            <h2>{product.title}</h2>
+            <h1>${product.price.amount}</h1>
             <button>Comprar</button>
           </div>
           <div className="topProducts_description">
             <h2>Descripcion del producto</h2>
-            {singleProduct.description.length ? (
-              <p>{singleProduct.description}</p>
+            {product.description.length ? (
+              <p>{product.description}</p>
             ) : (
               <p>Producto sin descripción</p>
             )}
           </div>
         </div>
-      ) : null}
+      )}
     </React.Fragment>
   );
 }

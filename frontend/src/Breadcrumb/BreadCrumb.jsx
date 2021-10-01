@@ -1,26 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import SingleProduct from "../SingleProduct/SingleProduct";
+
 import "./breadcrumb.scss";
-export default function BreadCrum() {
-  const category = useSelector((state) => state.SearchProducts.categories);
-  const singleCategory = useSelector(
-    (state) => state.SingleProduct.item.category
-  );
-  console.log(category, singleCategory);
+export default function BreadCrum({ category, categories }) {
+  console.log("RENDER BREAD", categories, category);
+
   return (
     <div className="breadcrum">
-      {/* {category.length ? (
-        category.map((cat) => (
+      {categories ? (
+        categories.map((cat) => (
           <Link key={cat} to="/items?category=">
             {cat} &gt;{" "}
           </Link>
         ))
-      ) : singleCategory[0] ? (
-        <Link key={singleCategory} to="/items?category=">
-          {singleCategory} &gt;{" "}
+      ) : category ? (
+        <Link key={category} to="/items?category=">
+          {category} &gt;{" "}
         </Link>
-      ) : null} */}
+      ) : null}
     </div>
   );
 }
