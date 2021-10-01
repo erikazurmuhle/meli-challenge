@@ -8,11 +8,6 @@ const SingleProducts = async (req, res, next) => {
     const responseD = await axios.get(
       `https://api.mercadolibre.com/items/${id}/description`
     );
-    console.log(
-      "RESULTADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-      response,
-      responseD
-    );
     const productsearch = response.data;
     const productDescript = responseD.data.plain_text;
     const price = {
@@ -31,6 +26,7 @@ const SingleProducts = async (req, res, next) => {
         free_shipping: productsearch.shipping.free_shipping,
         sold_quantity: productsearch.sold_quantity,
         description: productDescript,
+        category: [productsearch.category_id],
       },
     };
     res.send(product);

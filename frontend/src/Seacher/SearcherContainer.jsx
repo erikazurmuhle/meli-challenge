@@ -17,14 +17,20 @@ function SearcherContainer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(searchProd(productName)).then((res) =>
-      history.push("/items?search=")
-    );
+    dispatch(searchProd(productName)).then((res) => {
+      history.push("/items?search=");
+      const input = document.querySelector("input");
+      input.value = "";
+    });
   };
 
   return (
     <React.Fragment>
-      <Searcher handleChange={handleChange} handleSubmit={handleSubmit} />
+      <Searcher
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        productName={productName}
+      />
     </React.Fragment>
   );
 }
