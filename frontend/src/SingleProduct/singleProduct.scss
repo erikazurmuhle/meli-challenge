@@ -1,5 +1,12 @@
+$bgyelow: #ffe600;
+$bgwhite: #fdfff5;
+$cgrstrong: #333333;
+$cgrmed: #666666;
+$cgrligth: #999999;
+$cblue: #3483fa;
+$complete: 100%;
 .topProducts {
-  background-color: white;
+  background-color: $bgwhite;
   width: 95vw;
   height: auto;
   padding: 0px 14px;
@@ -16,7 +23,7 @@
 .topProducts_img,
 .topProducts_description {
   object-fit: cover;
-  width: 100%;
+  width: $complete;
   height: auto;
 }
 .topProducts_info h2 {
@@ -33,9 +40,9 @@
   margin-bottom: 16px;
 }
 .topProducts_info button {
-  width: 100%;
+  width: $complete;
   border-radius: 3px;
-  color: white;
+  color: $bgwhite;
   background-color: #3483fa;
   margin: 0;
   font-size: 20px;
@@ -65,7 +72,8 @@
     width: 680px;
   }
   .topProducts_info {
-    width: 300px;
+    width: 340px;
+    padding: 0 20px;
   }
   .topProducts_info h2 {
     margin-top: 16px;

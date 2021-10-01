@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //import "./App.css";
-import "./breadcrumb.css";
+import "./breadcrumb.scss";
 export default function BreadCrum() {
   return (
     <div className="breadcrum">

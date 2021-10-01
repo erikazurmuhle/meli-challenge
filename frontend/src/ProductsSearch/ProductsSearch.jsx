@@ -1,9 +1,10 @@
 import React from "react";
 import CardItem from "../CardItem/CardItem";
 import { useSelector } from "react-redux";
-import "./productsSearch.css";
+import "./productsSearch.scss";
 
 export default function ProductsSearch() {
+  console.log("ENTREEEE A CARDDDDD");
   const products = useSelector((state) => state.SearchProducts.items);
 
   return (

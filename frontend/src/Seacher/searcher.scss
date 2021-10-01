@@ -1,11 +1,17 @@
+$bgyelow: #ffe600;
+$bgwhite: #fdfff5;
+$cgrstrong: #333333;
+$cgrmed: #666666;
+$complete: 100%;
+
 .App-header {
-  background-color: #ffe600;
+  background-color: $bgyelow;
   min-height: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 10px;
-  color: white;
+  color: $bgwhite;
 
   justify-content: center;
 }
@@ -14,21 +20,34 @@
   display: flex;
   width: 80vw;
 }
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
 .App-header-input {
   width: 290px;
-  border: white;
-  color: #333333;
+  border: $bgwhite;
+  color: $cgrstrong;
   border-radius: 4px 0px 0px 4px;
+  outline: transparent;
+  @include placeholder {
+    color: $cgrmed;
+  }
 }
 .App-hearder_container-logo {
   margin: 5px;
   width: 50px;
   height: 40px;
-}
-button img {
-  width: 17px;
-  height: 17px;
-  margin-left: 2px;
 }
 button {
   border: none;
@@ -36,10 +55,15 @@ button {
   height: 33px;
   padding: 0;
   border-radius: 0px 4px 4px 0px;
+  img {
+    width: 17px;
+    height: 17px;
+    margin-left: 2px;
+  }
 }
 @media screen and (min-width: 700px) {
   .App-header {
-    width: 100%;
+    width: $complete;
     height: 50px;
   }
   .App-header_form {

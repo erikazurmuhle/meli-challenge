@@ -1,12 +1,16 @@
+$cgrstrong: #333333;
+$cgrligth: #999999;
+$complete: 100%;
+
 .cardItem {
   height: 20vh;
-  width: 100%;
+  width: $complete;
   display: flex;
   align-items: center;
-  border-bottom: rgba(128, 128, 128, 0.24) solid 1px;
+  border-bottom: $cgrligth solid 1px;
   padding: 10px;
   text-decoration: transparent;
-  color: rgba(21, 21, 22, 0.938);
+  color: $cgrstrong;
   flex-wrap: wrap;
 }
 .cardItem:last-child {
@@ -15,7 +19,7 @@
 .cardItem img {
   object-fit: contain;
   max-width: 15vw;
-  width: 100%;
+  width: $complete;
   height: 15vh;
 }
 .cardItem_info {

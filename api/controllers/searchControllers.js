@@ -1,5 +1,6 @@
 const axios = require("axios");
 const SearchProducts = async (req, res, next) => {
+  console.log("BUSCANDOOOO EN API MELI");
   const input = req.params.input;
   try {
     const response = await axios.get(
