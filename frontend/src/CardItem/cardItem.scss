@@ -1,6 +1,7 @@
 $cgrstrong: #333333;
 $cgrligth: #999999;
 $complete: 100%;
+$cgrmed: #666666;
 
 .cardItem {
   height: 20vh;
@@ -47,14 +48,30 @@ h4 {
   .cardItem {
     flex-wrap: nowrap;
     flex-direction: row;
+    padding: 6px;
+    img {
+      width: 180px;
+      height: 180px;
+    }
   }
   .cardItem_info {
-    padding-left: 1vw;
-    font-size: 14px;
+    padding-left: 16px;
+    h2 {
+      font-size: 18px;
+    }
+    h1 {
+      margin: 32px 0;
+      font-size: 24px;
+    }
   }
 
   .cardItem_state {
-    margin-left: 5vw;
     position: static;
+    h3 {
+      font-size: 12px;
+      margin-right: 60px;
+
+      color: $cgrmed;
+    }
   }
 }

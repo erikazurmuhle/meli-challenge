@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import "./productsSearch.scss";
 
 export default function ProductsSearch() {
-  console.log("ENTREEEE A CARDDDDD");
   const products = useSelector((state) => state.SearchProducts.items);
 
   return (

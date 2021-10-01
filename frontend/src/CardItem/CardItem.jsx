@@ -27,7 +27,7 @@ export default function CardItem({ producto }) {
           <h2>{producto.title}</h2>
         </div>
         <div className="cardItem_state">
-          <h4>Argentina</h4>
+          <h3>Argentina</h3>
         </div>
       </Link>
     </React.Fragment>

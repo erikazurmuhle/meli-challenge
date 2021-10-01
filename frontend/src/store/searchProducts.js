@@ -6,7 +6,6 @@ const initialState = {
 };
 
 export const searchProd = createAsyncThunk("SEARCHPROD", (productName) => {
-  console.log("PRODNAME CREATASYNC", productName);
   return axios.get(`http://localhost:3005/api/search/${productName}`);
 });
 

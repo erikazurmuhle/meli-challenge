@@ -9,7 +9,7 @@ import SingleProductContainer from "./SingleProduct/SingleProductContainer";
 
 function App() {
   const [categories, setCategories] = useState([]);
-  const [category, setcategory] = useState([]);
+  const [category, setcategory] = useState("");
   const products = useSelector((state) => state.SearchProducts);
   const product = useSelector((state) => state.SingleProduct);
 

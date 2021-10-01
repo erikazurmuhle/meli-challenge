@@ -1,12 +1,11 @@
 const axios = require("axios");
 const SearchProducts = async (req, res, next) => {
-  console.log("BUSCANDOOOO EN API MELI");
   const input = req.params.input;
   try {
     const response = await axios.get(
       `https://api.mercadolibre.com/sites/MLA/search?q=${input}`
     );
-    console.log("PRODUCTOOOOOO", response.data.results[0]);
+
     const results = response.data.results.slice(0, 4);
     const filterItems = [];
     const categories = [];
@@ -14,7 +13,6 @@ const SearchProducts = async (req, res, next) => {
     results.map((x) => {
       if (!categories.includes(x.category_id)) {
         categories.push(x.category_id);
-        console.log("CATEGORIESSSS", categories);
       }
       const price = {
         currency: x.prices.prices[0].currency_id,
