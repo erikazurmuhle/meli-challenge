@@ -1,7 +1,7 @@
 $bgyelow: #ffe600;
 $bgwhite: #fdfff5;
 $cgrstrong: #333333;
-$cgrmed: #666666;
+$cgrligth: #999999;
 $complete: 100%;
 
 .App-header {
@@ -41,7 +41,8 @@ $complete: 100%;
   border-radius: 4px 0px 0px 4px;
   outline: transparent;
   @include placeholder {
-    color: $cgrmed;
+    color: $cgrligth;
+    font-size: 18px;
   }
 }
 .App-hearder_container-logo {

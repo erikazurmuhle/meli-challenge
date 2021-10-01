@@ -9,7 +9,6 @@ import { resetState } from "../store/singleProduct";
 function SearcherContainer({ product }) {
   const [productName, setProductName] = useState("");
 
-  console.log("PROD STATE", product);
   const history = useHistory();
   const dispatch = useDispatch();
 

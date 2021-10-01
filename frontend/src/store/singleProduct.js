@@ -9,7 +9,6 @@ const initialState = {
   product: {},
 };
 export const getProd = createAsyncThunk("getProd", (id) => {
-  console.log("getprod CREATASYNC IDDDDD", id);
   return axios.get(`http://localhost:3005/api/item/${id}`);
 });
 export const resetState = createAction("RESETSTATE");
