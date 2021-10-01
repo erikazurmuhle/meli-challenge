@@ -3,24 +3,25 @@ import { useState } from "react";
 import Searcher from "./Searcher";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { searchProd, resetState } from "../store/searchProducts";
+import { searchProd } from "../store/searchProducts";
+import { resetState } from "../store/singleProduct";
 
-function SearcherContainer({ products }) {
+function SearcherContainer({ product }) {
   const [productName, setProductName] = useState("");
 
-  console.log("PRODSSSSSSS STATE", products);
+  console.log("PROD STATE", product);
   const history = useHistory();
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    // if (products) {
-    //   dispatch(resetState());
-    // }
     setProductName(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (product.item) {
+      dispatch(resetState());
+    }
     dispatch(searchProd(productName)).then((res) => {
       history.push("/items?search=");
       const input = document.querySelector("input");
