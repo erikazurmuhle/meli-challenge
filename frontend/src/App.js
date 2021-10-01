@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import SearcherContainer from "./Seacher/SearcherContainer";
 import BreadCrumb from "./Breadcrumb/BreadCrumb";
 import ProductsSearch from "./ProductsSearch/ProductsSearch";

@@ -1,0 +1,85 @@
+$bgyelow: #ffe600;
+$bgwhite: #fdfff5;
+$cgrstrong: #333333;
+$cgrmed: #666666;
+$complete: 100%;
+
+.App-header {
+  background-color: $bgyelow;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 10px;
+  color: $bgwhite;
+
+  justify-content: center;
+}
+.App-header_form {
+  padding-right: 10px;
+  display: flex;
+  width: 80vw;
+}
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+.App-header-input {
+  width: 290px;
+  border: $bgwhite;
+  color: $cgrstrong;
+  border-radius: 4px 0px 0px 4px;
+  outline: transparent;
+  @include placeholder {
+    color: $cgrmed;
+  }
+}
+.App-hearder_container-logo {
+  margin: 5px;
+  width: 50px;
+  height: 40px;
+}
+button {
+  border: none;
+  width: 40px;
+  height: 33px;
+  padding: 0;
+  border-radius: 0px 4px 4px 0px;
+  img {
+    width: 17px;
+    height: 17px;
+    margin-left: 2px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .App-header {
+    width: $complete;
+    height: 50px;
+  }
+  .App-header_form {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    height: 80%;
+    margin: 0 10px;
+    padding: 0;
+    width: 57%;
+  }
+  .App-header-input {
+    width: 54vw;
+    padding-left: 22px;
+    height: 33px;
+    font-size: 1.5em;
+  }
+}

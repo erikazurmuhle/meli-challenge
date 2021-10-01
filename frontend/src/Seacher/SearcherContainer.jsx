@@ -17,7 +17,9 @@ function SearcherContainer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(searchProd(productName)).then((res) => history.push("/items"));
+    dispatch(searchProd(productName)).then((res) =>
+      history.push("/items?search=")
+    );
   };
 
   return (

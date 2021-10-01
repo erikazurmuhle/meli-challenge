@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./cardItem.css";
+import "./cardItem.scss";
 
 export default function CardItem({ producto }) {
   return (

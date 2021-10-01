@@ -1,5 +1,5 @@
 import React from "react";
-import "./searcher.css";
+import "./searcher.scss";
 
 export default function searcher({ handleChange, handleSubmit }) {
   return (
