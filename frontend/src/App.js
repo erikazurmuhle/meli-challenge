@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <SearcherContainer products={products} />
+      <SearcherContainer product={product} />
       <div className="App_render">
         <BreadCrumb category={category} categories={categories} />
         <React.Fragment>
