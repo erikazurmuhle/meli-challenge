@@ -4,14 +4,21 @@ $cgrligth: #999999;
   width: 100vw;
   margin: 0px 0;
   padding-left: 11px;
-  p {
-    color: $cgrligth;
-    font-size: 14px;
+  h6 {
+    color: #999999;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 7px;
   }
 }
 
 @media screen and (min-width: 700px) {
   .breadcrum {
     width: 60vw;
+    h6 {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 16px;
+    }
   }
 }

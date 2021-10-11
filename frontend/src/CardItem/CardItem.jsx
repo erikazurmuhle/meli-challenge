@@ -11,7 +11,7 @@ export default function CardItem({ producto }) {
           alt={producto.title}
           title={producto.title}
         />
-        <div className="cardItem_info">
+        <hgroup className="cardItem_info">
           <h1>
             ${producto.price.amount}
             {producto.free_shipping ? (
@@ -25,7 +25,7 @@ export default function CardItem({ producto }) {
             ) : null}
           </h1>
           <h2>{producto.title}</h2>
-        </div>
+        </hgroup>
         <div className="cardItem_state">
           <h3>Argentina</h3>
         </div>

@@ -7,12 +7,12 @@ export default function ProductsSearch() {
   const products = useSelector((state) => state.SearchProducts.items);
 
   return (
-    <div className="containerCards">
+    <section className="containerCards">
       {products.length
         ? products.map((producto, item) => (
             <CardItem key={item} producto={producto} />
           ))
         : null}
-    </div>
+    </section>
   );
 }
