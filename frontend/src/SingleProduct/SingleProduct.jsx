@@ -8,7 +8,7 @@ export default function SingleProduct() {
   return (
     <React.Fragment>
       {product && (
-        <div className="topProducts">
+        <section className="topProducts">
           <div className="topProducts_img">
             <img
               src={product.picture}
@@ -37,7 +37,7 @@ export default function SingleProduct() {
               <p>Producto sin descripción</p>
             )}
           </div>
-        </div>
+        </section>
       )}
     </React.Fragment>
   );

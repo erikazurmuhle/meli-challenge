@@ -9,7 +9,7 @@ export default function searcher({ handleChange, handleSubmit, productName }) {
         src="Logo_ML@2x.png.png.png"
         alt="logo"
       ></img>
-      <form className="App-header_form">
+      <form onSubmit={handleSubmit} className="App-header_form">
         <input
           onChange={handleChange}
           className="App-header-input"
@@ -18,7 +18,7 @@ export default function searcher({ handleChange, handleSubmit, productName }) {
           aria-label="Ingresá lo que que buscás"
           value={productName}
         />
-        <button onClick={handleSubmit}>
+        <button type="submit">
           <img src="ic_Search@2x.png.png.png" alt="buscar" />
         </button>
       </form>

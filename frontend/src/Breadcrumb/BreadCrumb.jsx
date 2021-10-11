@@ -5,7 +5,7 @@ export default function BreadCrum({ category, categories }) {
   console.log("CAT", categories);
   return (
     <div className="breadcrum">
-      <p>
+      <h6>
         {categories ? (
           categories.map((cat) => <span>{cat} &gt; </span>)
         ) : category ? (
@@ -13,7 +13,7 @@ export default function BreadCrum({ category, categories }) {
             {category} hola &gt;{" "}
           </span>
         ) : null}
-      </p>
+      </h6>
     </div>
   );
 }

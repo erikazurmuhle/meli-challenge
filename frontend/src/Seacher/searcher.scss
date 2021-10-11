@@ -20,18 +20,22 @@ $complete: 100%;
   display: flex;
   width: 80vw;
 }
-@mixin placeholder {
+@mixin placeholder($color, $size) {
   &::-webkit-input-placeholder {
-    @content;
+    color: $color;
+    font-size: $size;
   }
   &:-moz-placeholder {
-    @content;
+    color: $color;
+    font-size: $size;
   }
   &::-moz-placeholder {
-    @content;
+    color: $color;
+    font-size: $size;
   }
   &:-ms-input-placeholder {
-    @content;
+    color: $color;
+    font-size: $size;
   }
 }
 .App-header-input {
@@ -40,15 +44,12 @@ $complete: 100%;
   color: $cgrstrong;
   border-radius: 4px 0px 0px 4px;
   outline: transparent;
-  @include placeholder {
-    color: $cgrligth;
-    font-size: 18px;
-  }
+  @include placeholder($cgrligth, 16px);
 }
 .App-hearder_container-logo {
   margin: 5px;
-  width: 50px;
-  height: 40px;
+  width: 45px;
+  height: 35px;
 }
 button {
   border: none;
@@ -67,6 +68,10 @@ button {
     width: $complete;
     height: 50px;
   }
+  .App-hearder_container-logo {
+    width: 57px;
+    height: 40px;
+  }
   .App-header_form {
     align-items: center;
     justify-content: center;
@@ -82,5 +87,6 @@ button {
     padding-left: 22px;
     height: 33px;
     font-size: 1.5em;
+    @include placeholder($cgrligth, 18px);
   }
 }
